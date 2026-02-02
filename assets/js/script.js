@@ -53,13 +53,28 @@
 
 
   // Attach smooth scroll to all nav links
-  document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault(); // Prevent default jump
-      const href = link.getAttribute("href").substring(1);
-      smoothScroll(href);
-    });
+  // Handle both smooth scroll AND page navigation safely
+document.querySelectorAll(".nav-link, .mobile-link, .scroll-link").forEach(link => {
+
+  link.addEventListener("click", function(e) {
+
+    const href = this.getAttribute("href");
+
+    // ✅ If it's a section (#about) → smooth scroll
+    if (href && href.startsWith("#")) {
+
+      e.preventDefault();
+
+      const targetId = href.substring(1);
+      smoothScroll(targetId);
+    }
+
+    // ✅ If it's a real page (aboutus.html)
+    // DO NOTHING → browser will navigate normally
   });
+
+});
+
 
   document.querySelectorAll(".mobile-link").forEach(link => {
     link.addEventListener("click", e => {
@@ -156,37 +171,37 @@ new Swiper(".testimonialsSwiper", {
 });
 
 
-  function toggleServices() {
-    const content = document.getElementById("servicesContent");
-    const arrow = document.getElementById("servicesArrow");
+  // function toggleServices() {
+  //   const content = document.getElementById("servicesContent");
+  //   const arrow = document.getElementById("servicesArrow");
 
-    if (content.style.maxHeight === "0px") {
-      content.style.maxHeight = "2000px";
-      arrow.style.transform = "rotate(0deg)";
-    } else {
-      content.style.maxHeight = "0px";
-      arrow.style.transform = "rotate(-90deg)";
-    }
-  }
+  //   if (content.style.maxHeight === "0px") {
+  //     content.style.maxHeight = "2000px";
+  //     arrow.style.transform = "rotate(0deg)";
+  //   } else {
+  //     content.style.maxHeight = "0px";
+  //     arrow.style.transform = "rotate(-90deg)";
+  //   }
+  // }
 
 
 
-  function toggleServices() {
+//   function toggleServices() {
 
-  const content = document.getElementById("servicesContent");
-  const arrow = document.getElementById("servicesArrow");
+//   const content = document.getElementById("servicesContent");
+//   const arrow = document.getElementById("servicesArrow");
 
-  if (content.style.maxHeight) {
+//   if (content.style.maxHeight) {
 
-    content.style.maxHeight = null;
-    arrow.style.transform = "rotate(0deg)";
+//     content.style.maxHeight = null;
+//     arrow.style.transform = "rotate(0deg)";
 
-  } else {
+//   } else {
 
-    content.style.maxHeight = content.scrollHeight + "px";
-    arrow.style.transform = "rotate(180deg)";
-  }
-}
+//     content.style.maxHeight = content.scrollHeight + "px";
+//     arrow.style.transform = "rotate(180deg)";
+//   }
+// }
 
 
 
