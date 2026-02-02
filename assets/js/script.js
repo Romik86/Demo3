@@ -171,37 +171,37 @@ new Swiper(".testimonialsSwiper", {
 });
 
 
-  function toggleServices() {
-    const content = document.getElementById("servicesContent");
-    const arrow = document.getElementById("servicesArrow");
+  // function toggleServices() {
+  //   const content = document.getElementById("servicesContent");
+  //   const arrow = document.getElementById("servicesArrow");
 
-    if (content.style.maxHeight === "0px") {
-      content.style.maxHeight = "2000px";
-      arrow.style.transform = "rotate(0deg)";
-    } else {
-      content.style.maxHeight = "0px";
-      arrow.style.transform = "rotate(-90deg)";
-    }
-  }
+  //   if (content.style.maxHeight === "0px") {
+  //     content.style.maxHeight = "2000px";
+  //     arrow.style.transform = "rotate(0deg)";
+  //   } else {
+  //     content.style.maxHeight = "0px";
+  //     arrow.style.transform = "rotate(-90deg)";
+  //   }
+  // }
 
 
 
-  function toggleServices() {
+//   function toggleServices() {
 
-  const content = document.getElementById("servicesContent");
-  const arrow = document.getElementById("servicesArrow");
+//   const content = document.getElementById("servicesContent");
+//   const arrow = document.getElementById("servicesArrow");
 
-  if (content.style.maxHeight) {
+//   if (content.style.maxHeight) {
 
-    content.style.maxHeight = null;
-    arrow.style.transform = "rotate(0deg)";
+//     content.style.maxHeight = null;
+//     arrow.style.transform = "rotate(0deg)";
 
-  } else {
+//   } else {
 
-    content.style.maxHeight = content.scrollHeight + "px";
-    arrow.style.transform = "rotate(180deg)";
-  }
-}
+//     content.style.maxHeight = content.scrollHeight + "px";
+//     arrow.style.transform = "rotate(180deg)";
+//   }
+// }
 
 
 
