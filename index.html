@@ -666,7 +666,23 @@ li, li * hover {
     <nav id="desktopNav" class="hidden lg:flex items-center gap-8 font-semibold text-gray-700">
       <a href="#hero" class="nav-link hover:text-yellow-600 transition">Home</a>
       <a href="#about" class="nav-link hover:text-yellow-600 transition">About Us</a>
-      <a href="#services" class="nav-link hover:text-yellow-600 transition">Services</a>
+      <div class="relative" id="servicesDropdown">
+  <button id="servicesBtn" class="nav-link flex items-center gap-1">
+    Services
+    <i class="fa-solid fa-chevron-down text-xs mt-1 transition-transform duration-300" id="servicesArrow"></i>
+  </button>
+
+  <!-- Dropdown Menu -->
+  <div id="servicesMenu" class="absolute left-0 mt-2 w-56 bg-white shadow-lg rounded-md opacity-0 invisible transition-opacity duration-300 z-50">
+    <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-yellow-100 hover:text-yellow-600">Appliance Installation & Repair</a>
+    <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-yellow-100 hover:text-yellow-600">Electrical Services</a>
+    <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-yellow-100 hover:text-yellow-600">Plumbing Services</a>
+    <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-yellow-100 hover:text-yellow-600">TV Wall Mounting</a>
+    <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-yellow-100 hover:text-yellow-600">Furniture Assembly</a>
+    <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-yellow-100 hover:text-yellow-600">General Handyman Services</a>
+  </div>
+</div>
+
       <a href="#gallery" class="nav-link hover:text-yellow-600 transition">Gallery</a>
       <a href="#contact" class="nav-link hover:text-yellow-600 transition">Contact</a>
     </nav>

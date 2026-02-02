@@ -187,3 +187,27 @@ new Swiper(".testimonialsSwiper", {
     arrow.style.transform = "rotate(180deg)";
   }
 }
+
+
+
+const servicesBtn = document.getElementById('servicesBtn');
+const servicesMenu = document.getElementById('servicesMenu');
+const servicesArrow = document.getElementById('servicesArrow');
+
+servicesBtn.addEventListener('click', () => {
+  // Toggle menu visibility
+  servicesMenu.classList.toggle('opacity-0');
+  servicesMenu.classList.toggle('invisible');
+  
+  // Rotate arrow
+  servicesArrow.classList.toggle('rotate-180');
+});
+
+// Optional: close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  if (!servicesBtn.contains(e.target) && !servicesMenu.contains(e.target)) {
+    servicesMenu.classList.add('opacity-0');
+    servicesMenu.classList.add('invisible');
+    servicesArrow.classList.remove('rotate-180');
+  }
+});
