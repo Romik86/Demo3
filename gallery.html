@@ -34,32 +34,30 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <style>
-    /* Global */
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      scroll-behavior: smooth;
-      background: #ffffff;
-    }
+  /* Global */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  scroll-behavior: smooth;
+  background: #ffffff;
+}
 
-    /* Fade-Up Animation (used alongside AOS for small elements) */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .animate-fadeUp { animation: fadeUp 1s ease-out forwards; opacity: 0; }
-    .delay-200 { animation-delay: .2s; }
-    .delay-400 { animation-delay: .4s; }
-    .delay-600 { animation-delay: .6s; }
+/* Fade-Up Animation (optional if used elsewhere) */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeUp { animation: fadeUp 1s ease-out forwards; opacity: 0; }
+.delay-200 { animation-delay: .2s; }
+.delay-400 { animation-delay: .4s; }
+.delay-600 { animation-delay: .6s; }
 
-    /* Small visual helpers for hero frame */
-    /* Ensure hero frame has the white border look when on dark environments */
-    .hero-frame {
-      box-shadow: 0 8px 30px rgba(0,0,0,0.45);
-      border: 12px solid rgba(255,255,255,0.92);
-    }
+/* Small visual helpers for frames, e.g., cards or images */
+.hero-frame {
+  box-shadow: 0 8px 30px rgba(0,0,0,0.45);
+  border: 12px solid rgba(255,255,255,0.92);
+}
 
-    
- /* Desktop nav ONLY above 1176px */
+/* Desktop nav ONLY above 1176px */
 @media (min-width: 1177px) {
   #menuBtn {
     display: none;
@@ -81,29 +79,24 @@
   }
 }
 
-
 /* Mobile Menu Animations */
 #mobileMenu {
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
 #mobileMenu:not(.hidden) {
   opacity: 1;
   transform: translateY(0);
 }
-
 .mobile-link {
   opacity: 0;
   transform: translateX(-20px);
   transition: opacity 0.3s ease, transform 0.3s ease, color 0.2s ease;
 }
-
 #mobileMenu:not(.hidden) .mobile-link {
   animation: slideInLeft 0.4s ease forwards;
 }
-
 #mobileMenu:not(.hidden) .mobile-link:nth-child(1) { animation-delay: 0.1s; }
 #mobileMenu:not(.hidden) .mobile-link:nth-child(2) { animation-delay: 0.15s; }
 #mobileMenu:not(.hidden) .mobile-link:nth-child(3) { animation-delay: 0.2s; }
@@ -118,98 +111,12 @@
 }
 
 /* Hamburger Icon Animation */
-#hamburgerIcon {
-  display: block;
-}
+#hamburgerIcon { display: block; }
+#closeIcon { display: none; }
+#menuBtn.active #hamburgerIcon { display: none; }
+#menuBtn.active #closeIcon { display: block; }
 
-#closeIcon {
-  display: none;
-}
-
-#menuBtn.active #hamburgerIcon {
-  display: none;
-}
-
-#menuBtn.active #closeIcon {
-  display: block;
-}
-
-/* Swiper Navigation Buttons */
-.hero-nav-next,
-.hero-nav-prev {
-  color: white !important;
-  width: 50px !important;
-  height: 50px !important;
-  background: rgba(255, 255, 255, 0.2) !important;
-  border-radius: 50% !important;
-  border: none !important;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  z-index: 50 !important;
-  cursor: pointer !important;
-  pointer-events: auto !important;
-  position: absolute !important;
-  top: 50% !important;
-  transform: translateY(-50%) !important;
-  margin-top: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  padding: 0 !important;
-  outline: none !important;
-}
-
-.hero-nav-next:hover,
-.hero-nav-prev:hover {
-  background: rgba(255, 255, 255, 0.3) !important;
-  transform: translateY(-50%) scale(1.1) !important;
-}
-
-.hero-nav-next {
-  right: 20px !important;
-  left: auto !important;
-}
-
-.hero-nav-prev {
-  left: 20px !important;
-  right: auto !important;
-}
-
-.hero-nav-next::after,
-.hero-nav-prev::after {
-  font-size: 28px !important;
-  font-weight: bold !important;
-  font-family: Arial, sans-serif !important;
-}
-
-.hero-nav-next::after {
-  content: '›' !important;
-}
-
-.hero-nav-prev::after {
-  content: '‹' !important;
-}
-
-/* Override any Swiper default styles */
-.heroSwiper .swiper-button-disabled {
-  opacity: 0.35 !important;
-  cursor: auto !important;
-  pointer-events: none !important;
-}
-
-
-/* Hide hero nav buttons on small screens */
-@media (max-width: 768px) {
-  .hero-nav-next,
-  .hero-nav-prev {
-    display: none !important;
-  }
-}
-
-
-/* =========================
-   BULLET ROW LAYOUT
-========================= */
+/* Bullets & Engraved Text (if used elsewhere) */
 .bullets-row {
   display: flex;
   justify-content: center;
@@ -217,92 +124,26 @@
   gap: 18px;
   flex-wrap: wrap;
 }
-
-.bullet-container {
-  display: inline-block;
-}
-
-.bullet-svg {
-  display: block;
-  overflow: visible;
-}
-
-ul li, ol li {
-  color: #ffffff ;         /* Pure black text */
-  font-weight: bold;
-  text-shadow: none;              /* Remove any transparency or shadow */
-  opacity: 1 !important;          /* Fully opaque */
-}
-
-/* =========================
-   ENGRAVED TEXT – INSIDE CIRCLE
-========================= */
+.bullet-container { display: inline-block; }
+.bullet-svg { display: block; overflow: visible; }
 .engraved-text {
   font-size: 19px;
   font-weight: 600;
   letter-spacing: 0.7px;
-
-  fill: #000000;        /* PURE BLACK */
-  stroke: #000000;      /* PURE BLACK */
+  fill: #000000;
+  stroke: #000000;
   stroke-width: 1.2px;
-
   paint-order: stroke fill;
   text-anchor: middle;
   dominant-baseline: middle;
   text-rendering: geometricPrecision;
-
   transform-box: fill-box;
   transform-origin: center;
   transform: scale(0.90) translateY(3px);
 }
+.engraved-text textPath { dominant-baseline: middle; }
 
-
-/* EXTRA SAFETY FOR LONG WORDS */
-.engraved-text textPath {
-  dominant-baseline: middle;
-}
-
-/* =========================
-   SIZE-SPECIFIC TUNING
-========================= */
-
-/* Large bullets (SIX, SHOOTER) */
-.size-lg .engraved-text {
-  font-size: 20px;
-  letter-spacing: 0.6px;
-  transform: scale(0.88) translateY(3px);
-}
-
-/* Medium bullets (BOY, CONDUCT) */
-.size-md .engraved-text {
-  font-size: 19px;
-  letter-spacing: 0.6px;
-  transform: scale(0.87) translateY(3px);
-}
-
-/* Small bullets (CODE) */
-.size-sm .engraved-text {
-  font-size: 19px;
-  letter-spacing: 0.5px;
-  transform: scale(0.86) translateY(3px);
-}
-
-/* Extra small (OF) */
-.size-xs .engraved-text {
-  font-size: 19px;
-  letter-spacing: 0.4px;
-  transform: scale(0.85) translateY(3px);
-}
-
-/* =========================
-   SVG SIZE CONTROL
-========================= */
-.size-lg svg { width: 120px; height: 120px; }
-.size-md svg { width: 100px; height: 100px; }
-.size-sm svg { width: 90px;  height: 90px; }
-.size-xs svg { width: 80px;  height: 80px; }
-
-
+/* Extra safety for long words */
 li, li * {
   color: #ffffff !important;
   font-weight: 700 !important;
@@ -311,67 +152,14 @@ li, li * {
   background: transparent !important;
   -webkit-text-stroke: 0.7px #000 !important;
 }
-
 li, li * hover {
   color: #d8b30e !important;
   text-shadow: none !important;
   background: transparent !important;
   -webkit-text-stroke: 0.7px #000 !important;
-
 }
 
-
-
-/* =========================
-   MOBILE HERO TEXT FIX
-========================= */
-@media (max-width: 768px) {
-
-  /* Center hero text vertically */
-  .heroSwiper .swiper-slide > div.absolute {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    height: 100%;
-  }
-
-  .heroSwiper h1 {
-    margin-bottom: 16px;
-  }
-
-  .heroSwiper p {
-    margin-top: 12px;
-  }
-}
-
-
-
-/* =========================
-   MOBILE HERO IMAGE SCALE UP
-========================= */
-@media (max-width: 768px) {
-
-  /* Make slides slightly taller */
-  .heroSwiper,
-  .heroSwiper .swiper-wrapper,
-  .heroSwiper .swiper-slide {
-    min-height: 105vh !important;
-  }
-
-  /* Scale images vertically */
-  .heroSwiper img,
-  .hero-image {
-    height: 100% !important;
-    width: 100%;
-    object-fit: cover;
-    object-position: center top;
-  }
-}
-
-
+/* Footer links */
 .footer-links li,
 .footer-links li a {
   color: #ffffff !important;
@@ -379,16 +167,11 @@ li, li * hover {
   font-weight: 500 !important;
 }
 
-.hero-title {
-  font-family: 'Rye', serif;
-  letter-spacing: 1px;
-}
-
+/* Nav link hover underline */
 .nav-link {
   position: relative;
   display: inline-block;
 }
-
 .nav-link::after {
   content: "";
   position: absolute;
@@ -396,85 +179,52 @@ li, li * hover {
   bottom: -6px;
   width: 0%;
   height: 2px;
-  background-color: #d8b30e; /* yellow */
+  background-color: #d8b30e;
   transition: width 0.3s ease;
 }
+.nav-link:hover::after { width: 100%; }
 
-.nav-link:hover::after {
-  width: 100%;
-}
-
-
-
-
+/* Horse background effect (optional) */
 .horse-bg {
   position: relative;
   background-color: #fefce8;
   overflow: hidden;
 }
-
-/* Animated horse layer */
 .horse-bg::before {
   content: "";
   position: absolute;
   inset: 0;
-
   background-image: url("assets/images/horse.png");
   background-repeat: repeat;
   background-size: 300px auto;
-
   opacity: 0.06;
   pointer-events: none;
   z-index: 0;
-
-  /* animations */
   animation:
     horseFadeIn 1.4s ease-out forwards,
     horseWalk 60s linear infinite;
 }
+.horse-bg > div { position: relative; z-index: 1; }
+@keyframes horseFadeIn { from { opacity: 0; } to { opacity: 0.06; } }
+@keyframes horseWalk { from { background-position: 0 0; } to { background-position: +1200px 0; } }
 
-/* Keep content above horses */
-.horse-bg > div {
-  position: relative;
-  z-index: 1;
-}
-
-/* fade-in on page load */
-@keyframes horseFadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 0.06;
-  }
-}
-
-/* slow walking motion */
-@keyframes horseWalk {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: +1200px 0;
-  }
-}
-
-
+/* Services header */
 .services-header {
     display: flex;
-    align-items: center;   /* THIS fixes the level */
+    align-items: center;
     justify-content: space-between;
     cursor: pointer;
 }
 .services-header i,
-.services-header svg {
-    vertical-align: middle;
-}
-.services-header i {
-    position: relative;
-    top: 1px;   /* try 1–2px if needed */
-}
+.services-header svg { vertical-align: middle; }
+.services-header i { position: relative; top: 1px; }
 
+/* Footer quick link hover */
+.footer-quick-link {
+  color: #fff;
+  transition: color 0.2s;
+}
+.footer-quick-link:hover { color: #facc15 !important; }
 
 
 
@@ -495,11 +245,7 @@ li, li * hover {
 
 
   <!-- Navigation buttons (outside swiper, above overlay) -->
-  <button class="swiper-button-next hero-nav-next" type="button" aria-label="Next slide"></button>
-  <button class="swiper-button-prev hero-nav-prev" type="button" aria-label="Previous slide"></button>
-
-  <!-- Gradient Overlay -->
-  <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/60 pointer-events-none z-0"></div>
+ 
 </div>
 
 
@@ -560,7 +306,7 @@ li, li * hover {
 
     <!-- DESKTOP NAV -->
     <nav id="desktopNav" class="hidden lg:flex items-center gap-8 font-semibold text-gray-700">
-      <a href="#hero" class="nav-link hover:text-yellow-600 transition">Home</a>
+      <a href="index.html" class="nav-link hover:text-yellow-600 transition">Home</a>
       <a href="#about" class="nav-link hover:text-yellow-600 transition">About Us</a>
      <div class="relative" id="servicesDropdown">
   <button id="servicesBtn" class="nav-link flex items-center gap-1">
@@ -637,7 +383,7 @@ li, li * hover {
 
   <!-- Mobile Menu Content -->
   <div class="flex-1 flex flex-col justify-center px-6 py-10 space-y-6">
-    <a href="#hero" class="mobile-link flex items-center gap-4 text-xl font-semibold hover:text-yellow-400 transition-colors py-3 border-b border-white/10">
+    <a href="index.html" class="mobile-link flex items-center gap-4 text-xl font-semibold hover:text-yellow-400 transition-colors py-3 border-b border-white/10">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
       </svg>
@@ -700,6 +446,50 @@ li, li * hover {
 </header>
 
 
+
+
+<!-- GALLERY SECTION -->
+<section id="gallery" class="w-full py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-12">Our Work Gallery</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Gallery Item -->
+      <div class="overflow-hidden rounded-lg shadow-lg group">
+        <img src="assets/images/gallery1.jpg" alt="Gallery Image 1" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow-lg group">
+        <img src="assets/images/gallery2.jpg" alt="Gallery Image 2" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow-lg group">
+        <img src="assets/images/gallery3.jpg" alt="Gallery Image 3" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow-lg group">
+        <img src="assets/images/gallery4.jpg" alt="Gallery Image 4" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+      </div>
+
+      <!-- Add more images -->
+      <div class="overflow-hidden rounded-lg shadow-lg group">
+        <img src="assets/images/gallery5.jpg" alt="Gallery Image 5" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow-lg group">
+        <img src="assets/images/gallery6.jpg" alt="Gallery Image 6" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow-lg group">
+        <img src="assets/images/gallery7.jpg" alt="Gallery Image 7" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+      </div>
+
+      <div class="overflow-hidden rounded-lg shadow-lg group">
+        <img src="assets/images/gallery8.jpg" alt="Gallery Image 8" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+      </div>
+    </div>
+  </div>
+</section>
 
 
 

@@ -53,13 +53,28 @@
 
 
   // Attach smooth scroll to all nav links
-  document.querySelectorAll(".nav-link").forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault(); // Prevent default jump
-      const href = link.getAttribute("href").substring(1);
-      smoothScroll(href);
-    });
+  // Handle both smooth scroll AND page navigation safely
+document.querySelectorAll(".nav-link, .mobile-link, .scroll-link").forEach(link => {
+
+  link.addEventListener("click", function(e) {
+
+    const href = this.getAttribute("href");
+
+    // ✅ If it's a section (#about) → smooth scroll
+    if (href && href.startsWith("#")) {
+
+      e.preventDefault();
+
+      const targetId = href.substring(1);
+      smoothScroll(targetId);
+    }
+
+    // ✅ If it's a real page (aboutus.html)
+    // DO NOTHING → browser will navigate normally
   });
+
+});
+
 
   document.querySelectorAll(".mobile-link").forEach(link => {
     link.addEventListener("click", e => {
