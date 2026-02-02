@@ -155,3 +155,17 @@ new Swiper(".testimonialsSwiper", {
   },
 });
 
+
+  function toggleServices() {
+    const content = document.getElementById("servicesContent");
+    const arrow = document.getElementById("servicesArrow");
+
+    if (content.style.maxHeight === "0px") {
+      content.style.maxHeight = "2000px";
+      arrow.style.transform = "rotate(0deg)";
+    } else {
+      content.style.maxHeight = "0px";
+      arrow.style.transform = "rotate(-90deg)";
+    }
+  }
+
