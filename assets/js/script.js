@@ -21,13 +21,8 @@
   }
 
   // Close menu when clicking on a mobile link
-  document.querySelectorAll(".mobile-link").forEach(link => {
-    link.addEventListener("click", () => {
-      if (!mobileMenu.classList.contains("hidden")) {
-        toggleMobileMenu();
-      }
-    });
-  });
+  
+
 
   // Smooth scroll function
  function smoothScroll(targetId) {
@@ -76,13 +71,6 @@ document.querySelectorAll(".nav-link, .mobile-link, .scroll-link").forEach(link 
 });
 
 
-  document.querySelectorAll(".mobile-link").forEach(link => {
-    link.addEventListener("click", e => {
-      e.preventDefault(); 
-      const href = link.getAttribute("href").substring(1);
-      smoothScroll(href);
-    });
-  });
 
 
   // FAQ Toggle
@@ -225,4 +213,30 @@ document.addEventListener('click', (e) => {
     servicesMenu.classList.add('invisible');
     servicesArrow.classList.remove('rotate-180');
   }
+});
+
+
+
+
+// Unified mobile-link handler
+document.querySelectorAll(".mobile-link").forEach(link => {
+  link.addEventListener("click", function(e) {
+    const href = this.getAttribute("href");
+
+    // 1️⃣ If it's a section link (#about), do smooth scroll
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      smoothScroll(targetId);
+    } else {
+      // 2️⃣ Real page link → navigate normally
+      // Close mobile menu first
+      if (!mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.add("hidden");
+        menuBtn.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+      // DO NOT preventDefault → browser navigates to page
+    }
+  });
 });
