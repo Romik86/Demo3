@@ -6,7 +6,10 @@
     
 
   <title>Apollo Handyman – Quality You Can Trust</title>
-  <link rel="icon" href="assets/images/logoo.png" type="image/png">
+  <link rel="icon" href="assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifes4">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Tailwind CDN -->
@@ -459,6 +462,22 @@ li, li * hover {
 }
 
 
+.services-header {
+    display: flex;
+    align-items: center;   /* THIS fixes the level */
+    justify-content: space-between;
+    cursor: pointer;
+}
+.services-header i,
+.services-header svg {
+    vertical-align: middle;
+}
+.services-header i {
+    position: relative;
+    top: 1px;   /* try 1–2px if needed */
+}
+
+
 
 
   </style>
@@ -489,14 +508,14 @@ li, li * hover {
 
           <h1 class="hero-title text-white font-normal text-4xl sm:text-5xl lg:text-6xl mb-4 drop-shadow-lg"
 
-              data-aos="fade-up"><br>Apollo Handyman</h1>
+              ><br>Apollo Handyman</h1>
           <p class="text-white/90 max-w-2xl text-lg sm:text-xl"
-              data-aos="fade-up" data-aos-delay="200">
+               data-aos-delay="200">
             Reliable, Skilled, and Professional Home Services You Can Trust
           </p>
           <a href="#services"
             class="scroll-link mt-8 border border-white text-white bg-transparent px-7 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition"
-            data-aos="fade-up" data-aos-delay="500">
+             data-aos-delay="500">
             View Our Services
           </a>
         </div>
@@ -510,16 +529,16 @@ li, li * hover {
 <br><br><br>
           <h1 class="hero-title text-white font-normal text-4xl sm:text-5xl lg:text-6xl mb-4 drop-shadow-lg"
 
-              data-aos="fade-up">Complete Handyman Solutions</h1>
+              >Complete Handyman Solutions</h1>
           <p class="text-white/90 max-w-4xl text-lg sm:text-xl py-3"
-              data-aos="fade-up" data-aos-delay="200">
+               data-aos-delay="200">
            From appliance installation and plumbing to electrical work and home repairs, Apollo Handyman delivers dependable service with expert craftsmanship for every job—big or small.
           </p>
           
          
           <a href="#services"
             class="scroll-link mt-8 border border-white text-white bg-transparent px-7 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition"
-            data-aos="fade-up" data-aos-delay="500">
+             data-aos-delay="500">
             Our Services
           </a>
         </div>
@@ -535,14 +554,14 @@ li, li * hover {
 <br><br><br>
     <h1 class="hero-title text-white font-normal text-4xl sm:text-5xl lg:text-6xl mb-4 drop-shadow-lg"
 
-        data-aos="fade-up">Professional Repairs Done Right</h1>
+        >Professional Repairs Done Right</h1>
     <p class="text-white/90 max-w-4xl text-lg sm:text-xl py-3"
-        data-aos="fade-up" data-aos-delay="200">
+         data-aos-delay="200">
       We take pride in clean work, clear communication, and results that last. When you call Apollo Handyman, your home is in skilled hands.
     </p>
     <a href="#services"
        class="scroll-link mt-8 border border-white text-white bg-transparent px-7 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition"
-       data-aos="fade-up" data-aos-delay="500">
+        data-aos-delay="500">
      Get a Free Quote
     </a>
   </div>
@@ -556,14 +575,14 @@ li, li * hover {
 
           <h1 class="hero-title text-white font-normal text-4xl sm:text-5xl lg:text-6xl mb-4 drop-shadow-lg"
 
-              data-aos="fade-up"><br>Your Go-To Local Handyman</h1>
+              ><br>Your Go-To Local Handyman</h1>
           <p class="text-white/90 max-w-2xl text-lg sm:text-xl"
-              data-aos="fade-up" data-aos-delay="200">
+               data-aos-delay="200">
             Quality workmanship, honest pricing, and fast response—backed by experience and professionalism you can rely on.
           </p>
           <a href="#services"
             class="scroll-link mt-8 border border-white text-white bg-transparent px-7 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition"
-            data-aos="fade-up" data-aos-delay="500">
+             data-aos-delay="500">
             Contact Us
           </a>
         </div>
@@ -776,7 +795,7 @@ li, li * hover {
   <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
 
     <!-- LEFT: Text -->
-    <div class="w-full lg:w-1/2" data-aos="fade-up" data-aos-delay="100">
+    <div class="w-full lg:w-1/2"  data-aos-delay="100">
       <h2 class="hero-title text-4xl font-bold text-red-800 mb-6 tracking-wide">
         About Apollo Handyman
       </h2>
@@ -794,7 +813,7 @@ li, li * hover {
     </div>
 
     <!-- RIGHT: Images (no overlap on mobile) -->
-    <div class="w-full lg:w-1/2 flex items-start lg:items-center" data-aos="fade-up">
+    <div class="w-full lg:w-1/2 flex items-start lg:items-center" >
       <div class="grid grid-cols-2 gap-8 w-full">
 
         <!-- LEFT image (lower only on lg screens) -->
@@ -830,10 +849,12 @@ li, li * hover {
     <!-- DROPDOWN TITLE -->
     <div class="flex items-center justify-center gap-3 cursor-pointer select-none"
          onclick="toggleServices()">
-      <h2 class="hero-title text-4xl font-bold text-center text-red-800 mb-3"
-          data-aos="fade-up">
+      <h2 class="hero-title text-4xl font-bold text-center text-red-800 leading-none">
+
         Our Handyman Services
       </h2>
+      <br> <br>
+      <br><br>
       <span id="servicesArrow"
             class="text-red-800 text-2xl transition-transform duration-300">
         ▼
@@ -841,19 +862,20 @@ li, li * hover {
     </div>
 
     <p class="text-gray-600 leading-relaxed text-base sm:text-lg font-semibold text-center mb-12 max-w-2xl mx-auto"
-       data-aos="fade-up" data-aos-delay="150">
+        data-aos-delay="150">
       Professional installation and repair of all major household appliances. We ensure safe setup, proper functionality, and dependable performance across all major brands.
     </p>
 
     <!-- DROPDOWN CONTENT -->
     <div id="servicesContent"
-         class="overflow-hidden transition-all duration-500 max-h-[2000px]">
+     class="overflow-hidden transition-all duration-500 max-h-0">
+
 
       <!-- ⬇️ YOUR GRID (UNCHANGED) -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 gap-y-12">
 
       <!-- Card 1 -->
-      <div class="group rounded-xl overflow-hidden bg-white shadow-md transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1" data-aos="fade-up">
+      <div class="group rounded-xl overflow-hidden bg-white shadow-md transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1" >
         <div class="relative overflow-hidden">
           <img src="assets/images/hvac_installation.jpg" alt="HVAC"
                class="h-64 w-full object-cover transition duration-700 group-hover:scale-110">
@@ -866,7 +888,7 @@ li, li * hover {
       </div>
 
       <!-- Card 2 -->
-      <div class="group rounded-xl overflow-hidden bg-white shadow-md transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1" data-aos="fade-up" data-aos-delay="150">
+      <div class="group rounded-xl overflow-hidden bg-white shadow-md transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1"  data-aos-delay="150">
         <div class="relative overflow-hidden">
           <img src="assets/images/elec.jpg" alt="Heating & Air Conditioning"
                class="h-64 w-full object-cover transition duration-700 group-hover:scale-110">
@@ -879,7 +901,7 @@ li, li * hover {
       </div>
 
       <!-- Card 3 -->
-      <div class="group rounded-xl overflow-hidden bg-white shadow-md transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1" data-aos="fade-up" data-aos-delay="300">
+      <div class="group rounded-xl overflow-hidden bg-white shadow-md transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1"  data-aos-delay="300">
         <div class="relative overflow-hidden">
           <img src="assets/images/plumbing.webp" alt="Affordable Plumbing"
                class="h-64 w-full object-cover transition duration-700 group-hover:scale-110">
@@ -892,7 +914,7 @@ li, li * hover {
       </div>
 
       <!-- Card 4 -->
-<div class="group rounded-xl overflow-hidden bg-white shadow-md transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1" data-aos="fade-up" data-aos-delay="450">
+<div class="group rounded-xl overflow-hidden bg-white shadow-md transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1"  data-aos-delay="450">
   <div class="relative overflow-hidden">
     <img src="assets/images/tv.jpg" alt="Backflow Services"
          class="h-64 w-full object-cover transition duration-700 group-hover:scale-110">
@@ -906,7 +928,7 @@ li, li * hover {
 </div>
 
 <!-- Card 5 -->
-<div class="group rounded-xl overflow-hidden bg-white shadow-md transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1" data-aos="fade-up" data-aos-delay="600">
+<div class="group rounded-xl overflow-hidden bg-white shadow-md transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1"  data-aos-delay="600">
   <div class="relative overflow-hidden">
     <img src="assets/images/furniture.jpg" alt="Sewer Services"
          class="h-64 w-full object-cover transition duration-700 group-hover:scale-110">
@@ -920,9 +942,9 @@ li, li * hover {
 </div>
 
 <!-- Card 6 -->
-<div class="group rounded-xl overflow-hidden bg-white shadow-md transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1" data-aos="fade-up" data-aos-delay="750">
+<div class="group rounded-xl overflow-hidden bg-white shadow-md transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:-translate-y-1"  data-aos-delay="750">
   <div class="relative overflow-hidden">
-    <img src="assets/images/8.jpeg" alt="Commercial Hvac"
+    <img src="assets/images/88.jpeg" alt="Commercial Hvac"
          class="h-64 w-full object-cover transition duration-700 group-hover:scale-110">
   </div>
   <div class="p-6 transition-all duration-500 group-hover:translate-y-1">
@@ -948,12 +970,12 @@ li, li * hover {
 
 
     <!-- Section Title -->
-    <h2 class="hero-title text-4xl font-bold text-red-800 mb-6" data-aos="fade-up">
+    <h2 class="hero-title text-4xl font-bold text-red-800 mb-6" >
       Why Choose Apollo Handyman
     </h2>
 
     <!-- Intro Text -->
-    <p class="text-gray-700 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-12 opacity-90" data-aos="fade-up" data-aos-delay="100">
+    <p class="text-gray-700 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-12 opacity-90"  data-aos-delay="100">
       Maintaining a home requires dependable service and skilled workmanship. Apollo Handyman delivers both—consistently and professionally.
 
     </p>
@@ -962,7 +984,7 @@ li, li * hover {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
 
       <!-- Point 1: Expertise -->
-      <div class="flex flex-col items-center border-2 border-red-800 rounded-xl p-6 bg-white shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="150">
+      <div class="flex flex-col items-center border-2 border-red-800 rounded-xl p-6 bg-white shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"  data-aos-delay="150">
         <div class="w-16 h-16 flex items-center justify-center rounded-full bg-red-800 text-white mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -973,7 +995,7 @@ li, li * hover {
       </div>
 
       <!-- Point 2: Customer Comfort -->
-      <div class="flex flex-col items-center border-2 border-red-800 rounded-xl p-6 bg-white shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="250">
+      <div class="flex flex-col items-center border-2 border-red-800 rounded-xl p-6 bg-white shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"  data-aos-delay="250">
         <div class="w-16 h-16 flex items-center justify-center rounded-full bg-yellow-400 text-white mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-3 0-5 3-5 5s2 5 5 5 5-2 5-5-2-5-5-5z" />
@@ -984,7 +1006,7 @@ li, li * hover {
       </div>
 
       <!-- Point 3: Reliable Service -->
-      <div class="flex flex-col items-center border-2 border-red-800 rounded-xl p-6 bg-white shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="350">
+      <div class="flex flex-col items-center border-2 border-red-800 rounded-xl p-6 bg-white shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"  data-aos-delay="350">
         <div class="w-16 h-16 flex items-center justify-center rounded-full bg-red-800 text-white mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
@@ -995,7 +1017,7 @@ li, li * hover {
       </div>
 
       <!-- Point 4: Comprehensive Solutions -->
-      <div class="flex flex-col items-center border-2 border-red-800 rounded-xl p-6 bg-white shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="450">
+      <div class="flex flex-col items-center border-2 border-red-800 rounded-xl p-6 bg-white shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"  data-aos-delay="450">
         <div class="w-16 h-16 flex items-center justify-center rounded-full bg-yellow-400 text-white mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h18M3 12h18M3 17h18" />
@@ -1021,19 +1043,19 @@ li, li * hover {
 
 
 <!-- OUR COMMITMENT SECTION -->
-<section id="about" class="py-20 bg-white" data-aos="fade-up">
+<section id="about" class="py-20 bg-white" >
 
   <div class="pt-6"></div>
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
     <!-- LEFT SIDE TEXT -->
     <div>
-      <h2 class="hero-title text-4xl md:text-4xl font-bold text-[#7B1D10] mb-10" data-aos="fade-up">
+      <h2 class="hero-title text-4xl md:text-4xl font-bold text-[#7B1D10] mb-10" >
         Our Commitment to You
       </h2>
 
       <!-- Item 1 -->
-      <div class="flex items-start gap-4 mb-10" data-aos="fade-up" data-aos-delay="100">
+      <div class="flex items-start gap-4 mb-10"  data-aos-delay="100">
         <div class="w-12 h-12 rounded-xl bg-[#7B1D10] flex items-center justify-center flex-shrink-0">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 11c0 1.657-1.343 3-3 3S6 12.657 6 11s1.343-3 3-3 3 1.343 3 3zm0 0v4m6-4a6 6 0 11-12 0 6 6 0 0112 0z" />
@@ -1049,7 +1071,7 @@ li, li * hover {
       </div>
 
       <!-- Item 2 -->
-      <div class="flex items-start gap-4 mb-10" data-aos="fade-up" data-aos-delay="200">
+      <div class="flex items-start gap-4 mb-10"  data-aos-delay="200">
         <div class="w-12 h-12 rounded-xl bg-[#B36A2E] flex items-center justify-center flex-shrink-0">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
@@ -1065,7 +1087,7 @@ li, li * hover {
       </div>
 
       <!-- Item 3 -->
-      <div class="flex items-start gap-4 mb-10" data-aos="fade-up" data-aos-delay="300">
+      <div class="flex items-start gap-4 mb-10"  data-aos-delay="300">
         <div class="w-12 h-12 rounded-xl bg-[#E0B800] flex items-center justify-center flex-shrink-0">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A4 4 0 018 16h8a4 4 0 012.879 1.804M12 12a4 4 0 100-8 4 4 0 000 8z" />
@@ -1082,7 +1104,7 @@ li, li * hover {
     </div>
 
     <!-- RIGHT SIDE IMAGE -->
-    <div class="relative" data-aos="fade-up" data-aos-delay="400">
+    <div class="relative"  data-aos-delay="400">
       <img 
         src="assets/images/commit.jpg"
         class="rounded-3xl shadow-lg w-full object-cover"
@@ -1107,13 +1129,13 @@ li, li * hover {
   <div class="max-w-7xl mx-auto px-6 text-center">
 
     <!-- Section Title -->
-    <h2 class="hero-title text-4xl font-bold text-red-800 mb-6" data-aos="fade-up">
+    <h2 class="hero-title text-4xl font-bold text-red-800 mb-6" >
       What Our Customers Say
     </h2>
 
     <!-- Intro Text -->
     <p class="text-gray-700 text-base sm:text-lg leading-relaxed max-w-3xl mx-auto mb-12 opacity-90"
-       data-aos="fade-up" data-aos-delay="100">
+        data-aos-delay="100">
       Homeowners trust Apollo Handyman for reliable service and quality results. Here’s what they have to say.
     </p>
 
@@ -1256,7 +1278,7 @@ li, li * hover {
   <!-- GALLERY (kept structure from original site; replace images as needed) -->
   <section id="gallery" class="max-w-7xl mx-auto px-6 py-16">
   <!-- Section Title -->
-  <h2 class="hero-title text-4xl font-bold text-red-800 mb-12 text-center" data-aos="fade-up">
+  <h2 class="hero-title text-4xl font-bold text-red-800 mb-12 text-center" >
     Gallery
   </h2>
 
@@ -1309,14 +1331,14 @@ li, li * hover {
   </video>
 </div>
 
-<div class="overflow-hidden rounded-xl transform transition duration-500 hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="300">
+<div class="overflow-hidden rounded-xl transform transition duration-500 hover:scale-105 hover:shadow-xl"  data-aos-delay="300">
         <img src="assets/images/8.jpeg" class="w-full h-38 object-cover rounded-xl" alt="">
       </div>
     </div> 
 
   <!-- 4th Video -->
   <!-- <div class="overflow-hidden rounded-xl transform transition duration-500 hover:scale-105 hover:shadow-xl"
-       data-aos="fade-up" data-aos-delay="450">
+        data-aos-delay="450">
 
     <video
       src="assets/images/video4.mp4"
@@ -1338,10 +1360,10 @@ li, li * hover {
 
 
     <!-- <div class="grid grid-cols-2 gap-4">
-      <div class="overflow-hidden rounded-xl transform transition duration-500 hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="300">
+      <div class="overflow-hidden rounded-xl transform transition duration-500 hover:scale-105 hover:shadow-xl"  data-aos-delay="300">
         <img src="assets/images/7.jpeg" class="w-full h-48 object-cover rounded-xl" alt="">
       </div>
-      <div class="overflow-hidden rounded-xl transform transition duration-500 hover:scale-105 hover:shadow-xl" data-aos="fade-up" data-aos-delay="450">
+      <div class="overflow-hidden rounded-xl transform transition duration-500 hover:scale-105 hover:shadow-xl"  data-aos-delay="450">
         <img src="assets/images/8.jpeg" class="w-full h-48 object-cover rounded-xl" alt="">
       </div>
     </div> -->
@@ -1351,18 +1373,18 @@ li, li * hover {
  
 
   <!-- FAQ SECTION -->
-<section id="faq" class="bg-[#FAF3DD] py-20" data-aos="fade-up">
+<section id="faq" class="bg-[#FAF3DD] py-20" >
 
   <div class="pt-10"></div>
   <div class="max-w-3xl mx-auto px-4 text-center">
 
     <!-- Title -->
-    <h2 class="hero-title text-3xl md:text-4xl font-bold text-[#7B1D10]" data-aos="fade-up">
+    <h2 class="hero-title text-3xl md:text-4xl font-bold text-[#7B1D10]" >
       Frequently Asked Questions
     </h2>
 
     <!-- Subtitle -->
-    <p class="text-gray-700 mt-3" data-aos="fade-up" data-aos-delay="100">
+    <p class="text-gray-700 mt-3"  data-aos-delay="100">
       Got questions? We've got answers! Here are the most common questions our customers ask.
     </p>
 
@@ -1370,7 +1392,7 @@ li, li * hover {
     <div class="mt-10 space-y-4">
 
       <!-- FAQ Item 1 -->
-      <div class="faq-item flex flex-col bg-white border border-yellow-300 rounded-2xl px-6 py-4 cursor-pointer hover:border-yellow-400 hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+      <div class="faq-item flex flex-col bg-white border border-yellow-300 rounded-2xl px-6 py-4 cursor-pointer hover:border-yellow-400 hover:shadow-lg transition-all duration-300"  data-aos-delay="200">
         <div class="flex justify-between items-center w-full">
           <span class="text-gray-800 font-medium text-base sm:text-lg">What types of services do you offer?</span>
           <span class="text-xl text-gray-600 ml-4 transition-transform duration-300">+</span>
@@ -1381,7 +1403,7 @@ li, li * hover {
       </div>
 
       <!-- FAQ Item 2 -->
-      <div class="faq-item flex flex-col bg-white border border-yellow-300 rounded-2xl px-6 py-4 cursor-pointer hover:border-yellow-400 hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
+      <div class="faq-item flex flex-col bg-white border border-yellow-300 rounded-2xl px-6 py-4 cursor-pointer hover:border-yellow-400 hover:shadow-lg transition-all duration-300"  data-aos-delay="300">
         <div class="flex justify-between items-center w-full">
           <span class="text-gray-800 font-medium text-base sm:text-lg">Do you have a minimum service charge?</span>
           <span class="text-xl text-gray-600 ml-4 transition-transform duration-300">+</span>
@@ -1393,7 +1415,7 @@ li, li * hover {
       </div>
 
       <!-- FAQ Item 3 -->
-      <div class="faq-item flex flex-col bg-white border border-yellow-300 rounded-2xl px-6 py-4 cursor-pointer hover:border-yellow-400 hover:shadow-lg transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+      <div class="faq-item flex flex-col bg-white border border-yellow-300 rounded-2xl px-6 py-4 cursor-pointer hover:border-yellow-400 hover:shadow-lg transition-all duration-300"  data-aos-delay="400">
         <div class="flex justify-between items-center w-full">
           <span class="text-gray-800 font-medium text-base sm:text-lg">Do you work with all appliance brands?</span>
           <span class="text-xl text-gray-600 ml-4 transition-transform duration-300">+</span>
@@ -1407,7 +1429,7 @@ li, li * hover {
     </div>
 
     <!-- Contact Box -->
-    <!-- <div class="mt-16 max-w-md mx-auto bg-white border border-yellow-300 rounded-2xl p-10 text-center shadow-sm" data-aos="fade-up" data-aos-delay="500">
+    <!-- <div class="mt-16 max-w-md mx-auto bg-white border border-yellow-300 rounded-2xl p-10 text-center shadow-sm"  data-aos-delay="500">
       <h3 class="font-semibold text-lg text-gray-900">Still have questions?</h3>
       <p class="text-gray-600 mt-1">Don't hesitate to reach out to our friendly cowboys!</p>
 
@@ -1424,7 +1446,7 @@ li, li * hover {
 </section>
 
   <!-- CTA -->
-  <!-- <section class="bg-sky-100 py-16 text-center px-6" data-aos="fade-up">
+  <!-- <section class="bg-sky-100 py-16 text-center px-6" >
     <h2 class="text-2xl md:text-3xl font-bold mb-4">Your Comfort, Our Mission</h2>
     <p class="text-gray-700 max-w-xl mx-auto mb-6">From emergency repairs to full installations — HVAC Cowboys delivers honest work, fast response, and reliable results.</p>
     <button onclick="scrollToSection('contact')" class="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-500 transition">Talk to us now →</button>
@@ -1435,7 +1457,7 @@ li, li * hover {
   <div class="max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
 
     <!-- LEFT BOX -->
-    <div class="bg-white text-black p-8 rounded-xl shadow-md flex flex-col" data-aos="fade-up">
+    <div class="bg-white text-black p-8 rounded-xl shadow-md flex flex-col" >
       <h3 class="font-bold text-lg mb-4">Need Reliable Home Services?</h3>
       <p class="text-gray-600 mb-6">Contact Apollo Handyman today for professional, dependable home repairs and installations.</p>
 
@@ -1450,7 +1472,7 @@ li, li * hover {
 
     <!-- RIGHT IMAGE -->
     <!-- GOOGLE MAP -->
-<div data-aos="fade-up" data-aos-delay="150" class="flex justify-center items-center w-full">
+<div  data-aos-delay="150" class="flex justify-center items-center w-full">
   <iframe 
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d396378.8772381837!2d-94.90516067071191!3d39.09030337911562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87c0f75eafe99997%3A0x558525e66aaa51a2!2sKansas%20City%2C%20MO%2C%20USA!5e0!3m2!1sen!2snp!4v1765479707394!5m2!1sen!2snp" 
     class="rounded-xl w-full max-w-[418px] h-[600px] object-cover"
@@ -1470,7 +1492,7 @@ li, li * hover {
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
 
     <!-- About / Logo -->
-    <div class="text-center md:text-left" data-aos="fade-up">
+    <div class="text-center md:text-left" >
       <img src="assets/images/logoo.png" alt="HVAC Cowboys Logo" class="w-24 mx-auto md:mx-0 mb-4 rounded-full border-2 border-white/50">
       <p class="text-gray-400 text-sm">
         Reliable, skilled, and professional home services you can trust. Apollo Handyman Services provides dependable handyman solutions, quality workmanship, and honest service for homeowners and businesses.
@@ -1478,7 +1500,7 @@ li, li * hover {
     </div>
 
     <!-- Quick Links -->
-    <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+    <div class="text-center"  data-aos-delay="100">
       <h3 class="text-white font-semibold mb-4">Quick Links</h3>
       <ul class="space-y-2">
         <li><a href="#about" class="footer-quick-link text-white transition">About Us</a></li>
@@ -1490,7 +1512,7 @@ li, li * hover {
     </div>
 
     <!-- Contact Info -->
-    <div class="text-center md:text-right" data-aos="fade-up" data-aos-delay="200">
+    <div class="text-center md:text-right"  data-aos-delay="200">
       <h3 class="text-white font-semibold mb-4">Contact Us</h3>
       <p class="text-gray-400 text-sm">123 XYZ, ABC City, USA</p>
       <p class="text-gray-400 text-sm">Phone: 443-880-1358</p>
@@ -1513,7 +1535,7 @@ li, li * hover {
   </style>
   </div>
 
-  <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm" data-aos="fade-up" data-aos-delay="300">
+  <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm"  data-aos-delay="300">
     © 2025 Apollo Handyman. All rights reserved.
     <br>
     <br>
